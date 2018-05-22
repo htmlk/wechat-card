@@ -1,0 +1,169 @@
+/* pages/giftCard/giftCard.wxss */
+.header-img{
+  height: 400rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-img image{
+  border-radius: 10rpx;
+  width: 500rpx;
+  height: 300rpx;
+}
+
+.header-list{
+  display: flex;
+  padding: 30rpx 0;
+}
+
+.item-imgselect{
+  position: absolute;
+  right: -10rpx;
+  top: -10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.header-item {
+  margin-left: 40rpx;
+  position: relative
+}
+
+
+
+
+.item-img{
+  width: 160rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+  display: flex;
+  box-sizing: border-box;  
+}
+.item-select-border{
+  width: 162rpx;
+  height: 102rpx;
+  border:2px solid green
+}
+/*选择商品  */
+.card-content{
+ padding: 30rpx;
+ padding-bottom: 200rpx;
+}
+.cc-title{
+ font-size: 30rpx;
+}
+.cc-item{
+  display: flex;
+  height: 165rpx;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 30rpx;
+}
+.cc-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cc-img image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.cc-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20rpx;
+  flex: 1;
+}
+.cc-content view{
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+.cc-add{
+  width: 180rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cc-jia-green{
+  background: green!important;
+  color: #fff!important;
+}
+.cc-add view{
+ margin-left: 10rpx;
+}
+.cc-input{
+  width: 60rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid green
+}
+.cc-jian,.cc-jia{
+  border: 1px solid #ccc;
+  height: 40rpx;
+  width: 40rpx;
+  font-size: 40rpx;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.useinfo {
+  display: flex;
+  font-size: 30rpx;
+  height: 100rpx;
+  align-items: center;
+  justify-content: center;
+  color: green
+}
+.useinfo  view{
+  margin:0 20rpx;
+}
+/*支付  */
+.card-pay{
+  width: 750rpx;
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 125rpx;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+}
+.cp-total{
+  flex: 1;
+  padding-left: 30rpx;
+  font-size: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+.cp-total view:nth-child(1){
+  color: #ccc;
+  font-size: 26rpx;
+}
+.cp-total view:nth-child(2){
+  
+  font-size: 36rpx;
+}
+.cp-btn{
+  width: 250rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cp-btn view{
+  width: 200rpx;
+  height: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e0e0e0;
+  color: #ccc;
+  border-radius: 50rpx;
+}

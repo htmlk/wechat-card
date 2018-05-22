@@ -1,0 +1,43 @@
+<view class='gf-container'>
+  <view class='header-img'><image src='{{selectImg}}'></image></view>
+  <scroll-view scroll-x>
+  <view class='header-list' style='width: {{requestResult.cover_list.length*200+40}}rpx'>
+    <view class='header-item' wx:for="{{requestResult.cover_list}}" data-imgurl="{{item.image}}" data-id="{{item.id}}"  bindtap='selectTap'>
+       <image wx:if="{{id==item.id}}" class='item-imgselect' src='/images/select.png'></image> 
+        <image class='item-img {{id==item.id?"item-select-border":""}}' src='{{item.image}}'></image>
+    </view>
+  </view>
+  </scroll-view>
+
+  <view class='card-content'>
+    <view class='cc-title'>选择商品</view>
+    <view class='cc-item' wx:for="{{requestResult.goods_list}}">
+      <view class='cc-img' > <image src='{{item.image}}'></image></view>
+      <view class='cc-content'>
+          <view>{{item.name}}</view>
+          <view>￥{{item.price/100}}</view>
+      </view>
+      <view class='cc-add'>
+           <view wx:if="{{item.num}}" class='cc-jian' bindtap='jianTap' data-index="{{index}}">-</view>
+          <view wx:if="{{item.num}}" class='cc-input'><input value='{{item.num}}'></input></view> 
+          <view class='cc-jia {{item.num?"cc-jia-green":""}} ' bindtap='jiaTap' data-index="{{index}}">+</view>
+      </view>
+    </view>
+
+    <view class='useinfo'>
+        <view>使用须知</view>
+        <view>隐私权条款</view>
+    </view> 
+  </view>
+  
+  <view class='card-pay'>
+      <view class='cp-total'>
+        <view>{{totalnum}}份礼品</view>
+        <view>￥{{totalprice}}</view>
+      </view>
+      <view class='cp-btn'>
+        <view class='{{totalnum?"cc-jia-green":""}}'>购买</view>
+      </view>
+  </view>
+
+</view>
